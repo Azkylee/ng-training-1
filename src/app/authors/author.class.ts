@@ -1,9 +1,11 @@
 export class Author {
     name : string;
     isFavorite : boolean;
+    count: number;
 
-    constructor(name: string) {
+    constructor(name: string, count: number, isFavorite: boolean) {
         this.name = name;
-        this.isFavorite = false;
+        this.isFavorite = isFavorite;
+        this.count = count;
     }
 }

@@ -1,6 +1,11 @@
 <h1>Authors</h1>
 <ul>
     <li *ngFor="let author of list">
-        {{author.name}} - <app-favorite [isFavorite]="author.isFavorite" (change)="onFavoriteChange($event)"></app-favorite>
+        {{author.name}} -
+        <app-favorite
+                [isFavorite]="author.isFavorite"
+                (change)="onFavoriteChange($event)">
+        </app-favorite>
+        <app-vote [voteCount]="author.count"></app-vote>
     </li>
 </ul>

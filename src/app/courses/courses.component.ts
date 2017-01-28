@@ -19,7 +19,7 @@ export class CoursesComponent implements OnInit {
     constructor(courseService: CourseService) {
         this.title = 'My super course name';
         this.courses = courseService.getCourses();
-        this.courseImgUrl = 'http://www.lorempixel.com/400/400';
+        this.courseImgUrl = 'http://www.lorempixel.com/50/50';
         this.inputActive = true;
     }
 

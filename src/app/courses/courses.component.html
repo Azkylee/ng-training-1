@@ -10,6 +10,7 @@
 </div>
 <ul>
     <li *ngFor="let course of courses">{{course.name}} -
+        <img [src]="courseImgUrl" alt="{{course.name}}">
         <app-favorite [isFavorite]="course.isFavorite"></app-favorite>
         <app-like [isLiked]="course.isLiked"
                   [count]="course.count"
@@ -18,4 +19,3 @@
         </app-like>
     </li>
 </ul>
-<img [src]="courseImgUrl" alt="">

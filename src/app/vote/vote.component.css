@@ -1,0 +1,13 @@
+.fa {
+    cursor: pointer;
+}
+.fa.fa-angle-up,
+.fa.fa-angle-down {
+    font-size: 20px;
+    color: lightgray;
+}
+
+.fa.fa-angle-up.voted,
+.fa.fa-angle-down.voted {
+    color: orange;
+}

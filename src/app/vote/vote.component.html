@@ -1,0 +1,11 @@
+<div>
+  <i class="fa fa-angle-up"
+     [class.voted]="myVote > 0"
+     (click)="onVoteUp()"
+     aria-hidden="true"></i>
+  <span>{{ voteCount }}</span>
+  <i class="fa fa-angle-down"
+     [class.voted]="myVote < 0"
+     aria-hidden="true"
+     (click)="onVoteDown()"></i>
+</div>
