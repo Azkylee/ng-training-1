@@ -1,0 +1,9 @@
+.fa {
+    cursor: pointer;
+}
+.fa.fa-heart {
+    color: lightgray;
+}
+.fa.fa-heart.isLiked {
+    color: deeppink;
+}
