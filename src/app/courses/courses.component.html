@@ -1,0 +1,14 @@
+<h2>Courses : {{title}}</h2>
+<input type="text"
+       appAutoGrow
+       [ngClass]="{'active': inputActive}"
+       [(ngModel)]="title">
+
+<div (click)="onDivClick($event)">
+    <button (click)="onBtnClick($event)">toggle active input</button>
+    <button (click)="resetInput('title')">Clear input</button>
+</div>
+<ul>
+    <li *ngFor="let course of courses">{{course.name}} - <app-favorite [isFavorite]="course.isFavorite"></app-favorite></li>
+</ul>
+<img [src]="courseImgUrl" alt="">

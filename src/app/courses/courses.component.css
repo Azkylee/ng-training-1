@@ -1,0 +1,6 @@
+input {
+    background-color: red;
+}
+input.active {
+    background-color: green;
+}
