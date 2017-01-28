@@ -40,4 +40,8 @@ export class CoursesComponent implements OnInit {
         this.inputActive = !this.inputActive;
     }
 
+    onLike($event) {
+        console.log('New like', $event)
+    }
+
 }

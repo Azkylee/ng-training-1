@@ -9,6 +9,13 @@
     <button (click)="resetInput('title')">Clear input</button>
 </div>
 <ul>
-    <li *ngFor="let course of courses">{{course.name}} - <app-favorite [isFavorite]="course.isFavorite"></app-favorite></li>
+    <li *ngFor="let course of courses">{{course.name}} -
+        <app-favorite [isFavorite]="course.isFavorite"></app-favorite>
+        <app-like [isLiked]="course.isLiked"
+                  [count]="course.count"
+                  (change)="onLike($event)">
+
+        </app-like>
+    </li>
 </ul>
 <img [src]="courseImgUrl" alt="">
