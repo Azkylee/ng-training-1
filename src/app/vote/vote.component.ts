@@ -23,7 +23,6 @@ export class VoteComponent implements OnInit {
     onVoteUp() {
         if (this.myVote == 0 || this.myVote < 0) {
             this.myVote++;
-            this.voteCount++;
         }
 
         this.vote.emit({myVote: this.myVote})
@@ -32,7 +31,6 @@ export class VoteComponent implements OnInit {
     onVoteDown() {
         if (this.myVote == 0 || this.myVote > 0) {
             this.myVote--;
-            this.voteCount--;
         }
 
         this.vote.emit({myVote: this.myVote})
