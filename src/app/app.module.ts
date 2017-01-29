@@ -10,6 +10,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { LikeComponent } from './like/like.component';
 import { VoteComponent } from './vote/vote.component';
+import { TweetsComponent } from './tweets/tweets.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { VoteComponent } from './vote/vote.component';
     AutoGrowDirective,
     FavoriteComponent,
     LikeComponent,
-    VoteComponent
+    VoteComponent,
+    TweetsComponent
   ],
   imports: [
     BrowserModule,
