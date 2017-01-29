@@ -11,6 +11,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { LikeComponent } from './like/like.component';
 import { VoteComponent } from './vote/vote.component';
 import { TweetsComponent } from './tweets/tweets.component';
+import { SummaryPipe } from './summary.pipe';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TweetsComponent } from './tweets/tweets.component';
     FavoriteComponent,
     LikeComponent,
     VoteComponent,
-    TweetsComponent
+    TweetsComponent,
+    SummaryPipe,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

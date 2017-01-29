@@ -4,7 +4,8 @@
   <img class="d-flex align-self-start mr-3" [src]="tweet.authorImage" alt="{{ tweet.author }}">
   <div class="media-body">
     <h5 class="mt-0">{{ tweet.title }}</h5>
-    <p>{{ tweet.message }}</p>
+    <p>{{ tweet.message | summary:50 }}</p>
+    <i>Tweeted @ {{tweet.date | date: 'dd/MM/yyyy - hh:mm:ss'}}</i>
   </div>
   <app-like [count]="tweet.likeCount" [isLiked]="tweet.isLiked" ></app-like>
 </div>
