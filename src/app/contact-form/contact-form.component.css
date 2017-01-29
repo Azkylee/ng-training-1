@@ -1,0 +1,12 @@
+#contact-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact-form .ng-valid {
+    border-color: greenyellow;
+}
+
+#contact-form .ng-touched.ng-invalid {
+    border-color: Red;
+}

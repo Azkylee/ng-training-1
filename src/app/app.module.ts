@@ -13,6 +13,7 @@ import { VoteComponent } from './vote/vote.component';
 import { TweetsComponent } from './tweets/tweets.component';
 import { SummaryPipe } from './summary.pipe';
 import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ZippyComponent } from './zippy/zippy.component';
     VoteComponent,
     TweetsComponent,
     SummaryPipe,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
