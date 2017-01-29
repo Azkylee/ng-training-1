@@ -1,0 +1,12 @@
+#subscription-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#subscription-form .ng-valid {
+    border-color: greenyellow;
+}
+
+#subscription-form .ng-touched.ng-invalid {
+    border-color: Red;
+}
