@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { SummaryPipe } from './summary.pipe';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
+import { SignupFormComponent } from './login-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,14 @@ import { SubscriptionFormComponent } from './subscription-form/subscription-form
     SummaryPipe,
     ZippyComponent,
     ContactFormComponent,
-    SubscriptionFormComponent
+    SubscriptionFormComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
