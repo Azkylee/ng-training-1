@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormControl, Validators, FormControlName} from "@angular/forms";
+import {FormGroup, FormControl, Validators, FormControlName, FormBuilder} from "@angular/forms";
+import {UsernameValidators} from "../username-validators";
 
 @Component({
     selector: 'app-signup-form',
@@ -8,12 +9,22 @@ import {FormGroup, FormControl, Validators, FormControlName} from "@angular/form
 })
 export class SignupFormComponent implements OnInit {
 
-    signupForm : FormGroup = new FormGroup({
-        username: new FormControl('', Validators.required),
-        password: new FormControl('', Validators.required)
-    });
+    /*signupForm : FormGroup = new FormGroup({
+     username: new FormControl('', Validators.required),
+     password: new FormControl('', Validators.required)
+     });*/
 
-    constructor() {
+    signupForm: FormGroup;
+
+    constructor(fb: FormBuilder) {
+
+        this.signupForm = fb.group({
+            username: ['', Validators.compose([
+                Validators.required,
+                UsernameValidators.cannotContainSpace
+            ])],
+            password: ['', Validators.required]
+        });
     }
 
     ngOnInit() {
