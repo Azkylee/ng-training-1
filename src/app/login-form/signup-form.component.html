@@ -1,20 +1,19 @@
 <form (ngSubmit)="signUp()"
       [formGroup]="signupForm">
     <h1>Sign up form</h1>
-
     <div class="form-group">
         <label for="username">Username</label>
         <input formControlName="username" name="username"
                type="text" class="form-control" id="username">
         <div>
-            <div *ngIf="signupForm.controls.username.required && signupForm.controls.username.touched"
+            <div *ngIf="signupForm.controls.username.errors.required && signupForm.controls.username.touched"
                  class="alert alert-danger">
                 Username is required
             </div>
-            <!--<div *ngIf="signupForm.controls.username.cannotContainSpace && signupForm.controls.username.touched"
+            <div *ngIf="signupForm.controls.username.errors.cannotContainSpace && signupForm.controls.username.touched"
                  class="alert alert-danger">
                 Username cannot contain space
-            </div>-->
+            </div>
         </div>
 
     </div>
@@ -22,7 +21,7 @@
         <label for="password">Password</label>
         <input formControlName="password" name="password"
                type="password" class="form-control" id="password">
-        <div *ngIf="signupForm.controls.password.required && signupForm.controls.password.touched"
+        <div *ngIf="signupForm.controls.password.errors.required && signupForm.controls.password.touched"
              class="alert alert-danger">
             Password is required
         </div>

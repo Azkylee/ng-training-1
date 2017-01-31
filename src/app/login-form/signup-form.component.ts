@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Inject} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormControlName, FormBuilder} from "@angular/forms";
 import {UsernameValidators} from "../username-validators";
 
@@ -16,7 +16,7 @@ export class SignupFormComponent implements OnInit {
 
     signupForm: FormGroup;
 
-    constructor(fb: FormBuilder) {
+    constructor(@Inject(FormBuilder) fb: FormBuilder) {
 
         this.signupForm = fb.group({
             username: ['', Validators.compose([
