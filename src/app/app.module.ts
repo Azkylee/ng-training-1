@@ -17,6 +17,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 import { SignupFormComponent } from './login-form/signup-form.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { RxAdventureComponent } from './rx-adventure/rx-adventure.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     ContactFormComponent,
     SubscriptionFormComponent,
     SignupFormComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    RxAdventureComponent
   ],
   imports: [
     BrowserModule,
