@@ -8,4 +8,18 @@ export class UsernameValidators {
 
         return null;
     }
+
+    static shouldBeUnique(control: AbstractControl) {
+
+        return new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                if (control.value === 'mosh')
+                    resolve({shouldBeUnique: true});
+                else
+                    resolve(null);
+            }, 1000);
+
+        });
+    }
 }

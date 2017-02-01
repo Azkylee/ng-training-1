@@ -19,10 +19,15 @@ export class SignupFormComponent implements OnInit {
     constructor(@Inject(FormBuilder) fb: FormBuilder) {
 
         this.signupForm = fb.group({
-            username: ['', Validators.compose([
-                Validators.required,
-                UsernameValidators.cannotContainSpace
-            ])],
+            username: ['',
+                Validators.compose([
+                    Validators.required,
+                    UsernameValidators.cannotContainSpace
+                ]),
+                Validators.composeAsync([
+                    UsernameValidators.shouldBeUnique
+                ])
+            ],
             password: ['', Validators.required]
         });
     }
@@ -31,6 +36,14 @@ export class SignupFormComponent implements OnInit {
     }
 
     signUp() {
+
+        // var result = AuthService.log(this.form.value)
+
+        this.signupForm.get('username').setErrors({
+           invalidLogin : true
+        });
+
+        console.info(this.signupForm.controls);
         console.info(this.signupForm.value);
     }
 }

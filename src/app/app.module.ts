@@ -16,6 +16,7 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 import { SignupFormComponent } from './login-form/signup-form.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SignupFormComponent } from './login-form/signup-form.component';
     ZippyComponent,
     ContactFormComponent,
     SubscriptionFormComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
