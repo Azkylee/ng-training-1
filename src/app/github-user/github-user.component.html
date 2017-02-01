@@ -1,0 +1,20 @@
+<div *ngIf="httpError && !isLoading"
+     class="alert alert-danger">
+    There were a problem processing the request
+</div>
+<div *ngIf="isLoading"
+     class="alert alert-warning">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i> loading data...
+</div>
+<div *ngIf="!httpError">
+    <img [src]="user.avatar_url"
+         class="avatar" alt="">
+    <h1>{{ user.login }}</h1>
+    <ul class="list-group">
+        <li *ngFor="let follower of followers"
+            class="list-group-item">
+            <img class="avatar" [src]="follower.avatar_url" alt="{{ follower.login }}">
+            <h4>{{ follower.login }}</h4>
+        </li>
+    </ul>
+</div>

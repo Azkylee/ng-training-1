@@ -18,6 +18,8 @@ import { SubscriptionFormComponent } from './subscription-form/subscription-form
 import { SignupFormComponent } from './login-form/signup-form.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { RxAdventureComponent } from './rx-adventure/rx-adventure.component';
+import { PostsComponent } from './posts/posts.component';
+import { GithubUserComponent } from './github-user/github-user.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RxAdventureComponent } from './rx-adventure/rx-adventure.component';
     SubscriptionFormComponent,
     SignupFormComponent,
     ResetPasswordComponent,
-    RxAdventureComponent
+    RxAdventureComponent,
+    PostsComponent,
+    GithubUserComponent
   ],
   imports: [
     BrowserModule,
