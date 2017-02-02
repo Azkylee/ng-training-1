@@ -8,6 +8,7 @@ import {TweetsService} from "./tweets.service";
   styleUrls: ['./tweets.component.css'],
   providers: [TweetsService]
 })
+
 export class TweetsComponent implements OnInit {
 
   tweetList : Array<Tweet>;

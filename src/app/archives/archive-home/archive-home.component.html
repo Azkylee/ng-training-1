@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let archive of archiveList">
+        <a routerLink="/archives/{{archive.month}}/{{archive.year}}">
+            {{ archive.day }}/{{ archive.month }}/{{ archive.year }}
+        </a>
+    </li>
+</ul>

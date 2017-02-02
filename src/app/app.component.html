@@ -1,1 +1,59 @@
-<app-github-user name="octobat"></app-github-user>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">ng-training</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a  routerLink="/archives" routerLinkActive="active"
+                    class="nav-link" href="#">Archives</a>
+            </li>
+            <li class="nav-item active">
+                <a  routerLink="/authors" routerLinkActive="active"
+                    class="nav-link" href="#">Authors</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/courses" routerLinkActive="active"
+                   class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/favorite" routerLinkActive="active"
+                   class="nav-link" href="#">Favorite</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/tweets" routerLinkActive="active"
+                   class="nav-link" href="#">Tweets</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/githubuser" routerLinkActive="active"
+                   class="nav-link" href="#">Github user</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/reset-password" routerLinkActive="active"
+                   class="nav-link" href="#">Reset password</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/contact-form" routerLinkActive="active"
+                   class="nav-link" href="#">Contact form</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/login-form" routerLinkActive="active"
+                   class="nav-link" href="#">Login form</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/posts" routerLinkActive="active"
+                   class="nav-link" href="#">Posts</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/zippy" routerLinkActive="active"
+                   class="nav-link" href="#">Zippy</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>
